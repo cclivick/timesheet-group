@@ -1,0 +1,7 @@
+.jumbotron{
+    background-image: linear-gradient(rgb(93, 93, 247), rgb(118, 231, 118));
+}
+.display-4,
+.lead{
+    color: white;
+}

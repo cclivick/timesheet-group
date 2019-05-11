@@ -48,7 +48,10 @@ database.ref().push({
 
 database.ref().on("child_added", function (snapshot){
 
-    $("#table").append("<tr><td>" + snapshot.val().name + "</td><td>" + snapshot.val().role + "</td><td id='monthsWorked'>Placeholder</td><td>" + snapshot.val().rate + "</td><td id='totalBilled'>Placeholder</td></tr>")
+    $("#table").append("<tr><td>" + snapshot.val().name + "</td><td>" + snapshot.val().role + "</td><td>" + moment().diff(date, "months") + "</td><td>" + snapshot.val().rate + "</td><td id='totalBilled'>Placeholder</td></tr>")
+
+    console.log(snapshot.val().dateAdded)
+
 }, function(err) {
     console.log(err)
 })
